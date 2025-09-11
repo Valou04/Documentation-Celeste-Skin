@@ -36,7 +36,7 @@ Afin d’obtenir ce fichier ZIP bien organisé, je vous conseille d’aller voir
 
 🔗 [Celeste Skinmod Template](https://kuksattu.github.io/celeste/skinmod-template)
 
-![Image Example](readme_assets/Image2.png)
+![Image Example](readme_assets/Image68.png)
 
 <br>
 
