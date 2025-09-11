@@ -126,7 +126,7 @@ L’intérieur d’un fichier `.xml` ressemble à ceci :
 
 ![Image Example](readme_assets/Image15.png)
 
-Vous avez le chemin menant à vos sprites commençant directement depuis le dossier « Gameplay » (`n’oubliez pas le « / » à la fin de votre chemin`) et start avec sur quelle animation votre skin va commencer.
+Vous avez le chemin menant à vos sprites commençant directement depuis le dossier « Gameplay » (**n’oubliez pas le « / » à la fin de votre chemin**) et start avec sur quelle animation votre skin va commencer.
 
 ![Image Example](readme_assets/Image16.png)
 
