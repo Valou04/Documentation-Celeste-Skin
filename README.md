@@ -38,6 +38,8 @@ Afin d’obtenir ce fichier ZIP bien organisé, je vous conseille d’aller voir
 
 ![Image Example](readme_assets/Image2.png)
 
+<br>
+
 ![Image Example](readme_assets/Image3.png)
 
 Sur ce GitHub se trouve un choix parmi 4 types de skins :
@@ -82,6 +84,8 @@ Juste un fichier contenant les dépendances de votre skin.
 
 ![Image Example](readme_assets/Image9.png)
 
+<br>
+
 ![Image Example](readme_assets/Image10.png)
 
 Dans ce fichier `.txt`, vous pourrez nommer les noms de vos types de skins (normal ou playback) :
@@ -99,6 +103,8 @@ Les fichiers `.xml` :
 
 ![Image Example](readme_assets/Image11.png)
 
+<br>
+
 ![Image Example](readme_assets/Image12.png)
 
 Vous avez deux types de fichiers `.xml`, « Portraits » (contenant les informations sur les visages et boîtes de texte des différents personnages) et « Sprites » (contenant les informations sur chaque sprite de votre skin), nous verrons ces informations un peu plus en détail plus bas dans le document.
@@ -112,8 +118,11 @@ L’intérieur d’un fichier `.xml` ressemble à ceci :
 
 ![Image Example](readme_assets/Image13.png)
 
+<br>
+
 ![Image Example](readme_assets/Image14.png)
 
+<br>
 
 ![Image Example](readme_assets/Image15.png)
 
@@ -176,6 +185,8 @@ Si vous mettez un « x » à la place des coordonnées, les pixels seront retir�
 ![Image Example](readme_assets/Image28.png)
 
 Certaines lignes possèdent « goto » qui représente l’animation qui va se jouer à la suite de l’animation en question.
+
+---
 
 ## Dossier « Atlases »
 
@@ -284,6 +295,7 @@ Sprite (idle)
 Sur Celeste, les cheveux de Madeline sont séparés de son corps, si vous voulez modifier la base des cheveux, alors modifiez le fichier « bang », ou alors vous pouvez directement mettre les cheveux sur le corps de base du skin (certains skins ont les cheveux directement sur le sprite, laissez-les).  
 ⚠️ **Mais attention, si vous mettez les cheveux directement sur le sprite, ils ne réagiront pas au vent et aux mouvements directionnels.** 
 
+---
 
 ## Configuration skin
 
@@ -292,6 +304,8 @@ Sur Celeste, les cheveux de Madeline sont séparés de son corps, si vous voulez
 Maintenant, le dossier « SkinConfig »  
 
 Il contient deux fichiers :  
+
+<br>
 
 ### CharacterConfig
 
@@ -302,7 +316,7 @@ Il contient deux fichiers :
 - **LowStaminaFlashHair** : Indique une endurance faible qui colorera les cheveux en plus du sprite.  
 - **DeathParticleColor** : Spécifie la couleur des particules du skin quand ce dernier meurt.  
 
----
+<br>
 
 ![Image Example](readme_assets/Image47.png)
 
@@ -315,13 +329,14 @@ Il contient deux fichiers :
 
 ![Image Example](readme_assets/Image48.jpg)
 
+<br>
 
 ![Image Example](readme_assets/Image49.png)
 
 Ces deux lignes sont là si vous souhaitez activer des animations customisées que vous pouvez supprimer (informations sur le Sprites.xml dans le dossier « Graphics »).  
 ![Image Example](readme_assets/Image50.png)
 
----
+<br>
 
 ![Image Example](readme_assets/Image51.png)
 
@@ -334,17 +349,23 @@ Ces deux lignes sont là si vous souhaitez activer des animations customisées q
 
 ![Image Example](readme_assets/Image52.png)
 
+<br>
+
 ![Image Example](readme_assets/Image53.png)
 
 - **IdleAnimationChance** : Représente la probabilité que les animations « idleA », « idleB », « idleC » soient jouées à la fin de l’animation « idle ».  
 
----
+<br>
 
 ### HairConfig
 
 ![Image Example](readme_assets/Image54.png)
 
+<br>
+
 ![Image Example](readme_assets/Image55.png)
+
+<br>
 
 ![Image Example](readme_assets/Image56.png)
 
@@ -418,14 +439,15 @@ Intérieur du fichier « .meta.yaml » :
 
 ![Image Example](readme_assets/Image65.png)
 
-- **Variant** ![Image Example](readme_assets/Image66.png)
-- 
+- **Variant** ![Image Example](readme_assets/Image7.png)
+ 
 - **Otherself variant**
 *PS : Je n’en ai pas pour mon skin (je vous laisse le lien du mod pour voir par vous-même).*
+
 👉 Lien du mod :  
 🔗 [Skin Mod Helper Plus](https://gamebanana.com/mods/53734) 
 
-- **Silhouette variant** ![Image Example](readme_assets/Image67.png) 
+- **Silhouette variant** ![Image Example](readme_assets/Image8.png) 
 
 ---
 
@@ -433,7 +455,7 @@ Intérieur du fichier « .meta.yaml » :
 
 Ces paramètres ci-dessous sont pour savoir si vous souhaitez utiliser des animations spécifiques ou alors celles par défaut (celles dans les dossiers de votre skin).  
 
-![Image Example](readme_assets/Image68.png) 
+![Image Example](readme_assets/Image67.png) 
 
 ---
 
