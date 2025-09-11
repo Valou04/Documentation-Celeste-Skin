@@ -445,7 +445,7 @@ Intérieur du fichier « .meta.yaml » :
 *PS : Je n’en ai pas pour mon skin (je vous laisse le lien du mod pour voir par vous-même).*
 
 👉 Lien du mod :  
-🔗 [Skin Mod Helper Plus](https://gamebanana.com/mods/53734) 
+🔗 [Otherself Mod](https://gamebanana.com/mods/53734) 
 
 - **Silhouette variant** ![Image Example](readme_assets/Image8.png) 
 
