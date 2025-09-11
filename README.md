@@ -477,9 +477,11 @@ Petite section, si vous ne savez pas vraiment par où commencer afin de créer v
 - [Piskel](https://www.piskelapp.com/)  
 - [GraphicsGale](https://graphicsgale.com/us/)  
 
-
+<br>
+<br>
 ----------------------------------------------------------------------------------------------------------------------
-
+<br>
+<br>
 
 # Create your own skin on Celeste
 
