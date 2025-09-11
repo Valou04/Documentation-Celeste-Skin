@@ -47,11 +47,6 @@ Sur ce GitHub se trouve un choix parmi 4 types de skins :
 - « No-backpack only » : qui vous fera un ZIP avec le sprite de Madeline sans backpack.  
 - « Backpack only » : qui vous fera un ZIP des sprites avec backpack.  
 - « Both » : qui vous fera un ZIP des sprites avec et sans backpack (qui seront séparés).  
-- « Reduced Spritecount » : qui vous fera un ZIP très réduit avec le moins d’efforts à faire pour créer le skin.  
-
-Pour les personnes débutantes, je vous conseille d’opter pour le ZIP « Reduced Spritecount », ce dernier vous permettra de gagner du temps, si vous le jugez nécessaire, vous pourrez rajouter d’autres sprites pour obtenir un rendu plus fluide.
-
-⚠️ **ATTENTION : le ZIP « Reduced Spritecount » a été enlevé par son/sa créateur/rice (il sera de retour plus tard sous de meilleures conditions, et cette documentation sera mise à jour le moment venu).**  
 
 Votre « Nickname » et le nom de votre personnage feront partie de vos dossiers pour votre skin, vous les verrez souvent entre certains dossiers (dans le cas ci-dessous Valou/Val_fox/).  
 Pour mieux vous expliquer « Valou/Val_fox / » se traduit par « YourName/YourCharacter/ » et sert à éviter les conflits avec d'autres sprites du même nom mais également cela correspond au système de nommage standard utilisé par la communauté Celeste pour l’architecture des mods.
@@ -533,12 +528,6 @@ On this GitHub, you will find a selection of four types of skins :
 - `No-backpack only` : which will create a ZIP file with Madeline's sprite without the backpack.
 - `Backpack only` : which will create a ZIP file of the sprites with backpack.
 - `Both` : which will create a ZIP file of the sprites with and without backpacks (which will be separate).
-- `Reduced Spritecount` : which will create a very small ZIP file with minimal effort required to create the skin.
-
-For beginners, I recommend choosing the ‘Reduced Spritecount’ ZIP file, which will save you time. If you feel it is necessary, you can add other sprites to achieve a smoother rendering.
-
-
-⚠️ **PLEASE NOTE: The ZIP file ‘Reduced Spritecount’ has been removed by its creator (it will be back later under better conditions, and this documentation will be updated when the time comes).**  
 
 Your nickname and character name will be included in your skin folders. 
 You will often see them between certain folders (in the example below, Valou/Val_fox/). To explain further, ‘Valou/Val_fox/’ translates to ‘YourName/YourCharacter/’ and is used to avoid conflicts with other sprites of the same name, but it also corresponds to the standard naming system used by the Celeste community for mod architecture.
