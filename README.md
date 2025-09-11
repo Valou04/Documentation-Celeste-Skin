@@ -42,7 +42,7 @@ Afin d’obtenir ce fichier ZIP bien organisé, je vous conseille d’aller voir
 
 ![Image Example](readme_assets/Image3.png)
 
-Sur ce GitHub se trouve un choix parmi 4 types de skins :
+Sur ce GitHub se trouve un choix parmi 3 types de skins :
 
 - « No-backpack only » : qui vous fera un ZIP avec le sprite de Madeline sans backpack.  
 - « Backpack only » : qui vous fera un ZIP des sprites avec backpack.  
@@ -523,7 +523,7 @@ To obtain this well-organized ZIP file, I recommend visiting this GitHub (Made b
 
 ![Image Example](readme_assets/Image3.png)
 
-On this GitHub, you will find a selection of four types of skins :
+On this GitHub, you will find a selection of 3 types of skins :
 
 - `No-backpack only` : which will create a ZIP file with Madeline's sprite without the backpack.
 - `Backpack only` : which will create a ZIP file of the sprites with backpack.
