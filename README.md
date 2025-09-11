@@ -442,7 +442,7 @@ Intérieur du fichier « .meta.yaml » :
 - **Variant** ![Image Example](readme_assets/Image7.png)
  
 - **Otherself variant**
-*PS : Je n’en ai pas pour mon skin (je vous laisse le lien du mod pour voir par vous-même).*
+*PS : Je n’en ai pas pour mon skin (je vous laisse le lien du mod (fait par Misirter E) pour voir par vous-même).*
 
 👉 Lien du mod :  
 🔗 [Otherself Mod](https://gamebanana.com/mods/53734) 
