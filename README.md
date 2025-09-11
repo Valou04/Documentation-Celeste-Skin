@@ -137,7 +137,7 @@ Mais ces frames peuvent être changées pour vous donner d’autres possibilité
 
 Par exemple, dans cette animation avec des frames comme :
 
-« 5*5, 6*4, 7*3, 8, 8, 9, 9, 10, 10, 10 »
+« 5 x 5, 6 x 4, 7 x 3, 8, 8, 9, 9, 10, 10, 10 »
 
 Nous pouvons traduire cela par :
 
