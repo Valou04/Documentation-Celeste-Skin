@@ -476,3 +476,498 @@ Petite section, si vous ne savez pas vraiment par où commencer afin de créer v
 - [Krita](https://krita.org/)  
 - [Piskel](https://www.piskelapp.com/)  
 - [GraphicsGale](https://graphicsgale.com/us/)  
+
+
+----------------------------------------------------------------------------------------------------------------------
+
+
+# Create your own skin on Celeste
+
+This documentation concerns the creation and organization of your skin on Celeste. 
+If you do not know what to do or where to start, we will try to answer your question(s) here.
+
+---
+
+## SUMMARY
+
+- Composition of the skin folder
+- Everest.yaml  
+- SkinModHelperConfig.yaml  
+- « Dialog » folder  
+- « Graphics » folder 
+- « Atlases » folder  
+- « Portraits » folder  
+- « Gameplay » folder  
+- « characters » folder   
+- Skin configuration
+- Colorgrading  
+- Position Frames Animations  
+- Skin Mod Helper Plus Settings 
+- « Advanced Options »  
+- Celeste NET  
+- Software Recommendations  
+
+---
+
+## Composition of the skin folder
+
+![Image Example](readme_assets/Image1.png)
+
+Your skin should be a zip file containing these folders and files:
+
+To obtain this well-organized ZIP file, I recommend visiting this GitHub (Made by Kuksa), which will prepare a ZIP file for you with everything you need for your skin (some animations may be missing if you are making a skin with or without a backpack, so make sure you have everything you need !): 
+
+
+🔗 [Celeste Skinmod Template](https://kuksattu.github.io/celeste/skinmod-template)
+
+![Image Example](readme_assets/Image2.png)
+
+<br>
+
+![Image Example](readme_assets/Image3.png)
+
+On this GitHub, you will find a selection of four types of skins :
+
+- `No-backpack only` : which will create a ZIP file with Madeline's sprite without the backpack.
+- `Backpack only` : which will create a ZIP file of the sprites with backpack.
+- `Both` : which will create a ZIP file of the sprites with and without backpacks (which will be separate).
+- `Reduced Spritecount` : which will create a very small ZIP file with minimal effort required to create the skin.
+
+For beginners, I recommend choosing the ‘Reduced Spritecount’ ZIP file, which will save you time. If you feel it is necessary, you can add other sprites to achieve a smoother rendering.
+
+
+⚠️ **PLEASE NOTE: The ZIP file ‘Reduced Spritecount’ has been removed by its creator (it will be back later under better conditions, and this documentation will be updated when the time comes).**  
+
+Your nickname and character name will be included in your skin folders. 
+You will often see them between certain folders (in the example below, Valou/Val_fox/). To explain further, ‘Valou/Val_fox/’ translates to ‘YourName/YourCharacter/’ and is used to avoid conflicts with other sprites of the same name, but it also corresponds to the standard naming system used by the Celeste community for mod architecture.
+
+![Image Example](readme_assets/Image4.png)
+
+First, we will look at the files 'everest.yaml' and 'SkinModHelperConfig.yaml' :
+
+---
+
+## Everest.yaml
+
+![Image Example](readme_assets/Image5.png)
+
+Just a file containing your skin's dependencies.
+
+---
+
+## SkinModHelperConfig.yaml
+
+![Image Example](readme_assets/Image6.png)
+
+- `SkinName` = the name of your skin
+- `Player_List` = activate if the skin is in the player skin list ![Image Example](readme_assets/Image7.png)  
+- `Silhouette_List` = activate if the skin is in the silhouette skin list, also called ‘playback’ (only activate if you intend to make one) ![Image Example](readme_assets/Image8.png)
+- `Character_ID` = name used in your .xml files
+- `OtherSprite_Path` = folder path leading to the second file ‘Sprites.xml’ for additional sprites.
+
+---
+
+## Dossier « Dialog »
+
+![Image Example](readme_assets/Image9.png)
+
+<br>
+
+![Image Example](readme_assets/Image10.png)
+
+In this .txt file, you can name your skin types (normal or playback) :
+
+- `SkinModHelper_Player__Valou_Val_fox` = player skin name
+- `SkinModHelper_Player__Valou_Val_fox_playback` = playback skin name
+- `SkinModHelper_Player__Valou_Val_fox__Description` =  Description of the skin (name of the creator) 
+- `SkinModHelper_Grouping__Valou_Val_fox` = name of your skin mod
+
+---
+
+## Dossier « Graphics »
+
+`.xml` files :
+
+![Image Example](readme_assets/Image11.png)
+
+<br>
+
+![Image Example](readme_assets/Image12.png)
+
+There are two types of .xml files: ‘Portraits’ (containing information about the faces and text boxes of the different characters) and ‘Sprites’ (containing information about each sprite in your skin). We will look at this information in more detail later in the document.
+
+You will have noticed that there are two ‘Sprites’ files. The first, located in the “Graphics” folder, contains information about the animations in the base game and mods, as well as the ‘playback’ sprite.
+The second contains information about sprites that use objects, for example, when Madeline uses the binoculars (‘Lookout’ animation).
+
+
+**Please note: if you put sprite animations using an object in the first Sprites.xml file, they will remain active even if you change skins, so keep in mind that you must separate sprites with and without objects.**
+
+The inside of an `.xml` file looks like this :
+
+![Image Example](readme_assets/Image13.png)
+
+<br>
+
+![Image Example](readme_assets/Image14.png)
+
+<br>
+
+![Image Example](readme_assets/Image15.png)
+
+You have the path leading to your sprites starting directly from the ‘Gameplay’ folder (**do not forget the ‘/’ at the end of your path**) and start with which animation your skin will begin with.
+
+![Image Example](readme_assets/Image16.png)
+
+Each line like this has an ID, which is the name of an animation also referenced in the game code itself, a path showing the folder path leading to the animation, and frames, which are the number of sprites for an animation (for example, for the ‘roll’ animation above, the frames range from sprite “roll0” to sprite ‘roll12’).
+But these frames can be changed to give you other possibilities for your animations. You don't need to scroll through your animation from 0 to 12, you can do whatever you want :
+
+
+![Image Example](readme_assets/Image17.png) 
+
+For example, in this animation with frames such as :
+
+« 5 x 5, 6 x 4, 7 x 3, 8, 8, 9, 9, 10, 10, 10 »
+
+We can translate this as :
+
+« 5, 5, 5, 5, 5, 6, 6, 6, 6, 7, 7, 7, 8, 8, 9, 9, 10, 10, 10 »
+
+Meaning that out of the total of 19 frames :
+
+-    The first 5 are the sprite ‘5’ 
+-    The next 4 are the sprite ‘6’
+-    The next 3 are the sprite ‘7’
+-    The next 2 are the sprite ‘8’
+-    The next 2 are the sprite ‘9’ 
+-    The last 3 are the sprite ‘10’
+
+The ‘delay’ is the time (in seconds) between each sprite in the animation (note that 0.1 delay = 10 FPS):
+
+Example with the ‘idle’ animation having a ‘delay’ of 0.1 :
+
+![Image Example](readme_assets/Image18.png)
+
+0 delay      0,1 delay           0,2 delay           0,3 delay        0,4 delay            0,5 delay         0,6 delay
+
+ ![Image Example](readme_assets/Image19.gif) ![Image Example](readme_assets/Image20.gif) ![Image Example](readme_assets/Image21.gif) ![Image Example](readme_assets/Image22.gif) ![Image Example](readme_assets/Image23.gif) ![Image Example](readme_assets/Image24.gif) ![Image Example](readme_assets/Image25.gif)
+
+![Image Example](readme_assets/Image26.png)
+
+In the ‘metadata’ section, there is also a folder path and a ‘hair’ variable containing the x and y coordinates of the hair pixels in each frame of the animation. These coordinates are relative to the sprite's original coordinates (called ‘Origin’ in the .xml file) and are separated by a ‘|’. Lik above, you can see : 
+
+`« -2,4|-2,4|-2,4|-2,4|-2,4|-2,4|-2,4|-2,4 |-2,4 »`
+
+You can view it like this :
+
+`« x, y|x, y|x, y|x, y|x, y|x, y|x, y|x, y |x, y »`
+
+The first coordinates are for frame 0, in this case the sprite ‘idle0’, and the next ones will be for ‘idle1’, “idle2” ... up to ‘idle8’. Like this :
+
+`«      x, y     |     x, y       |       x, y    |        x, y   |       x, y    |        x, y   |       x, y    |        x, y     |       x, y     » `
+
+`« frame 0 | frame 1 | frame 2 | frame 3 | frame 4 | frame 5 | frame 6 | frame 7  | frame 8 »`
+
+![Image Example](readme_assets/Image27.png)
+
+If you put an “x” in place of the coordinates, the pixels will be removed. 
+
+![Image Example](readme_assets/Image28.png)
+
+Some lines have ‘goto’, which represents the animation that will play after the animation in question.
+
+---
+
+## « Atlases » folder
+
+![Image Example](readme_assets/Image29.png)
+
+In the ‘Atlases’ folder, there are two folders :
+
+- the ‘Gameplay’ folder, where all your skin's sprites will be located
+- and the ‘Portraits’ folder, where your skin's portrait images will be located (you are not required to have portraits for your skin). 
+
+Let's quickly go over the ‘Portraits’ folder:
+
+---
+
+## Dossier « Portraits »
+
+![Image Example](readme_assets/Image30.png)
+
+It contains a **textbox** folder where you will find your character's dialogue box.
+
+ And the second folder corresponds to the one containing your character's facial expressions : 
+
+![Image Example](readme_assets/Image31.png)
+
+- The `madeline` folder for common expressions for your skin :
+
+![Image Example](readme_assets/Image32.jpg)
+
+- The `mirror` folder for your skin expressions in Chapter 5 :
+
+![Image Example](readme_assets/Image33.jpg)
+
+- The `phone` folder for your skin expressions at the end of Chapter 2 :
+
+![Image Example](readme_assets/Image34.jpg)
+
+---
+
+## « Gameplay » folder
+
+Now let's move on to the ‘Gameplay’ section 
+
+![Image Example](readme_assets/Image35.png)
+
+It contains a total of 3 files : 
+
+- An `objects` folder containing the ‘lookout’ animation
+
+![Image Example](readme_assets/Image36.png)
+
+- A `cutscenes` folder with the phone animation from chapter 2A
+
+![Image Example](readme_assets/Image37.png)
+
+- A `characters` folder with all the animations for the skin and playback (from the base game and mods)
+
+![Image Example](readme_assets/Image38.png)
+
+---
+
+## « characters » folder
+
+### Classic skin :  
+
+![Image Example](readme_assets/Image39.png)
+
+### Playback :  
+
+**The screenshot of the folder I am going to show you is one I made myself, it will not be ready for you when you receive your ZIP file.**
+
+![Image Example](readme_assets/Image40.png)
+
+⚠️ **PLEASE NOTE: When you download your ZIP file, you will receive a folder containing a ‘READ.me’ file with the following information :**
+
+![Image Example](readme_assets/Image41.png)
+
+<br>
+
+Let's look at the classic skin file :
+
+![Image Example](readme_assets/Image42.png)
+
+You must have the following folders:
+
+- `ColorGrading` (which will manage the colour change of your dash on your skin)
+- `Modded` (this one is not mandatory, but it contains sprites from various helpers/mods)
+- `SJ2021` (this is not mandatory and was added manually by me; it contains animations from the Strawberry Jam Paint level) 
+- `skinConfig` (which contains two .cs files that manage your skin's graphics settings; we will come back to this later) 
+- `unused` (which contains unused frames)
+- And the `tentacle` and `wakeUp` folders contain sprites from the base game for your skin (chapter 6 with Badeline's tentacles and Madeline's awakening from chapter 2)
+
+The rest of the files are sprites from the base game for your skin, which you can also modify as you see fit.
+
+Before diving into the ‘skinConfig’ and ‘Colorgrading’ folders, I would like to tell you about this file called ‘bang’.
+ 
+
+<br>
+
+Avant de se plonger dans les dossiers `skinConfig` et `Colorgrading`, j’aimerais vous parler de ce fichier s’appelant **bang**.  
+
+"Bang"
+
+![Image Example](readme_assets/Image43.png)
+
+Sprite (idle)
+
+![Image Example](readme_assets/Image44.png)
+
+On Celeste, Madeline's hair is separate from her body. If you want to modify the hair base, then modify the ‘bang’ file, or you can directly place the hair on the skin's base body (some skins have the hair directly on the sprite, leave them as they are). 
+⚠️ **But be careful, if you place the hair directly on the sprite, it will not react to wind and directional movements.** 
+
+---
+
+## Configuration skin
+
+![Image Example](readme_assets/Image45.png)
+
+Now, the « SkinConfig » folder 
+
+It contains two files :
+
+<br>
+
+### CharacterConfig
+
+![Image Example](readme_assets/Image46.png)
+
+- **SilhouetteMode**: The sprite will be tinted with the hair color if set to ‘true’ (this is why the skin playback sprites are white).
+- **LowStaminaFlashColor**: Specifies the colour that will flash when the player's stamina is low/exhausted.
+- **LowStaminaFlashHair**: Indicates low stamina, which will colour the hair in addition to the sprite.
+- **DeathParticleColour**: Specifies the colour of the skin's particles when it dies.
+
+<br>
+
+![Image Example](readme_assets/Image47.png)
+
+- **IdleColdOptions** : Represents the probability that animation ‘idle’ A, B, or C will play when Core's ‘cold’ mode is on the map (chapter 8) or when there is no mode:   
+  -    3 out of 9 chances of getting animation ‘idleA ‘
+  -    5 out of 9 chances of having the ‘idleB’ animation
+  -    1 out of 9 chances of having the ‘idleC’ animation
+ 
+
+#### Chapter 8 ‘Cold’ Mode :
+
+![Image Example](readme_assets/Image48.jpg)
+
+<br>
+
+![Image Example](readme_assets/Image49.png)
+
+These two lines are there if you wish to enable custom animations that you can delete (information on Sprites.xml in the ‘Graphics’ folder) :
+![Image Example](readme_assets/Image50.png)
+
+<br>
+
+![Image Example](readme_assets/Image51.png)
+
+- **IdleWarmOptions**: Represents the probability that animation ‘idle’ A, B, or C will play when Core's ‘warm’ mode is active on the map (chapter 8):
+  - 3 out of 9 chances of having the ‘idleA’ animation
+  - 5 out of 9 chances of having the ‘idleB’ animation
+  - 1 out of 9 chances of having the ‘idleC’ animation
+
+ 
+#### Chapter 8 ‘Warm’ Mode :
+
+![Image Example](readme_assets/Image52.png)
+
+<br>
+
+![Image Example](readme_assets/Image53.png)
+
+- **IdleAnimationChance**: Represents the probability that animations ‘idleA’, ‘idleB’, 'idleC' will be played at the end of the ‘idle’ animation.
+
+<br>
+
+### HairConfig
+
+![Image Example](readme_assets/Image54.png)
+
+<br>
+
+![Image Example](readme_assets/Image55.png)
+
+<br>
+
+![Image Example](readme_assets/Image56.png)
+
+- **HairFlash**: Activates the white flash that appears when your dash count changes.
+- **HairFloatingDashCount**: Specifies the number of dashes at which the skin's hair floats (such as when Madeline has two dashes).
+- **OutlineColor**: Specifies the colour of the hair outline, not the sprite.
+- **BangsOffset**: Allows you to change the position of the ‘bangs’ sprite (to be done if it exceeds the size of 10x10).
+- **HairOffset**: Allows you to change the position of the skin's hair (to be done if it exceeds the size of 10x10).
+- **Dashes**: Represents the number of dashes on the skin (‘-1’ for feather, ‘0’ for no dashes, etc.).
+- **Color**: Changes the colour of your skin's hair and dash (visual trail) by acting as a filter (in HEX code) based on your number of dashes.
+- **Scale**: Changes the size of your skin's hair (from start to finish) based on your number of dashes.
+- **Length**: Changes the length of your skin's hair based on your number of dashes.	 
+
+---
+
+## Colorgrading
+
+![Image Example](readme_assets/Image57.png)
+
+The colorgrading is a very important step in creating your skin.
+
+![Image Example](readme_assets/Image58.png)
+
+The colorgrading is a colour palette that will replace the colours on your skin with the modified colours.
+
+👉 Example :  
+
+**Colorgrading empty, unchanged**  
+![Image Example](readme_assets/Image59.png)
+
+**Colorgrading with modification**  
+![Image Example](readme_assets/Image60.png)
+
+**Sprite in your ZIP file**  
+![Image Example](readme_assets/Image61.png)
+
+**Sprite in the game**  
+![Image Example](readme_assets/Image62.png)
+
+The colorgrading is simply a palette on which you place the colours you want to see instead of other colours on your skin (and this applies to each dash).
+
+The colours in the basic palette (empty colorgrading, without modification) that you put on your skin will therefore be replaced in the game by the new colours you have placed on the palette (colorgrading with modification).
+
+*Don't forget to use the correct name for your colorgrading file ! (‘dash1’ for when your skin only has one dash, etc. See the screenshot of the folder above).*
+
+⚠️ **Please note: Some helper/mod and vanilla animations may not take colorgrading into account, so you will need to apply the colour of your dash directly to the sprite.**
+
+---
+
+## Position Frames Animations
+
+This is a specific point, but I had to mention it here. If you want to change the position of a specific sprite in an animation, you can !
+
+Let me explain: if, for example, you want to change the position of frame 13 of the ‘idleB’ animation, you simply need to have a ‘.meta.yaml’ file with the name of your frame (in this case, ‘idleB13.meta.yaml’) and enter the number of pixels by which you want to shift your sprite : 
+
+Inside your folder with your sprites :
+
+![Image Example](readme_assets/Image63.png)
+
+Inside the ‘.meta.yaml’ file
+
+![Image Example](readme_assets/Image64.png)
+
+*Here, the sprite ‘idleB13’ will only be shifted 12 pixels to the left.*
+
+⚠️ **Please note: Your ‘.meta.yaml’ file must be in the same folder as the sprite in question.** 
+
+---
+
+## Skin Mod Helper Plus Settings
+
+![Image Example](readme_assets/Image65.png)
+
+- **Variant** ![Image Example](readme_assets/Image7.png)
+ 
+- **Otherself variant**
+*PS : I don't have one for my skin (I'll leave you the link to the mod (made by Misirter E) so you can see for yourself).*
+
+👉 Link to the mod :  
+🔗 [Otherself Mod](https://gamebanana.com/mods/53734) 
+
+- **Silhouette variant** ![Image Example](readme_assets/Image8.png) 
+
+---
+
+## « Advanced Options »
+
+The settings below are for choosing whether you want to use specific animations or the default ones (those in your skin folders).
+
+![Image Example](readme_assets/Image67.png) 
+
+---
+
+## Celeste NET
+
+‘Celeste NET’ is a mod that allows you to play Celeste in multiplayer mode. You can also show your skin to your friends !
+
+All you need is for the person playing with you to have your ZIP file so that Celeste NET can recognize the skin and display it on their side.
+
+
+
+---
+
+## Recommandations Logiciels
+
+Little side note, if you don't really know where to start when it comes to creating your skin, here are some free software programs for creating sprites and other things :
+
+- [Paint.Net](https://www.getpaint.net/)  
+- [Krita](https://krita.org/)  
+- [Piskel](https://www.piskelapp.com/)  
+- [GraphicsGale](https://graphicsgale.com/us/)  
